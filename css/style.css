@@ -2,18 +2,22 @@ html{
     height: 500px;
     width: 500px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
 .container{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
 }
 
 .container > div{
+    border: 1px solid black;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
 }
+
+#unlockBtn{
+    display: flex;
+    justify-content: center;
+}
+
