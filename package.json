@@ -8,7 +8,21 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "electron": "^34.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.vozmediano.numerion",
+    "productName": "Numerion",
+    "files": [
+      "*.*",
+      "css/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "files/logo.ico"
+    }
   }
 }
