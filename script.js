@@ -107,7 +107,7 @@ unlockBtn.addEventListener('click', function () {
             map[i] = true;
         }
     }
-    if (map.every(value => value === true)){
+    if (map.every(value => value === true)) {
         hint.innerHTML = "<br>you win";
         gameWinner = true;
     }
@@ -122,24 +122,26 @@ unlockBtn.addEventListener('click', function () {
                 }
             }
         }
-            html += `There are ${correctNumbers} digits in the correct position`;
-            html += `<br>There are ${movedNumbers} digits in the incorrect position`;
-            hint.innerHTML = html
-        
+        html += `There are ${correctNumbers} digits in the correct position`;
+        html += `<br>There are ${movedNumbers} digits in the incorrect position`;
+        hint.innerHTML = html
+
     }
 
 })
 
 quitBtn.addEventListener('click', function () {
-    append(digit1Div, solution[0]);
-    append(digit2Div, solution[1]);
-    append(digit3Div, solution[2]);
-    append(digit4Div, solution[3]);
-    hint.innerHTML = "<br>loser";
+    if (!gameWinner) {
+        append(digit1Div, solution[0]);
+        append(digit2Div, solution[1]);
+        append(digit3Div, solution[2]);
+        append(digit4Div, solution[3]);
+        hint.innerHTML = "<br>loser";
+    }
     setTimeout(() => {
         window.close();
     }, 350);
-    
+
 });
 
 
