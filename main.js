@@ -6,7 +6,10 @@ function createWindow () {
         height: 500,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        frame: false,
+        autoHideMenuBar: true,
+        resizable: false
     });
 
     win.loadFile('index.html');
